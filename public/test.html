@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>校園團購系統</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <script language="JavaScript">
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    </script>
+
+    <!-- NAVBAR
+================================================== -->
+  
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">校園團購系統</a>
+            </div>
+            <div class="navbar-collapse collapse">
+
+              <ul class="nav navbar-nav navbar-right">
+                <!-- display new GroupBuy -->
+                <li class="active">
+                    <a href="#"><i class="glyphicon glyphicon-plus"></i></a></li>
+                <!-- display user info -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-align-justify"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                       <!-- dropdown menu links -->
+                      <li><a href="#"><i class="glyphicon glyphicon-star"></i>我的團購</a></li>
+                      <li><a href="#"><i class="glyphicon glyphicon-user"></i>會員資訊</a></li>
+                      <li><a href="#"><i class="glyphicon glyphicon-envelope"></i>好友邀請</a></li>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/義大利背景圖.jpg" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><b><font color="#F8F8FF">更方便的購物管道</font></b></h1>
+              <p><b>不再需要辛苦的多方比較，我們提供您更多、更好的產品做選擇，讓您可以輕鬆購物</b></p>
+              <p><a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">立即使用</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/背景圖(戒指).jpg" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><b>更詳細的商品說明</b></h1>
+              <p><font color="#000000"><b>大家可以分享自己的使用心得，讓您可以輕鬆評估想要購買的產品，把錢花在刀口上，得到真正適合的產品</b></font></p>
+              <p><a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">立即使用</a></p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/背景圖(下午茶).jpg" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><b>快速地與您的好友分享優質產品</b></h1>
+              <p><b><font color="#000000">方便且快速地邀請您的好友一同加入團購的行列，一起享有購物優惠</font></b></p>
+              <p><a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">立即使用</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+    <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title" id="myModalLabel">立即使用</h4>
+              </div>
+              <div class="modal-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                  <li><a href="#signin" data-toggle="tab">登入</a></li>
+                  <li><a href="#signup" data-toggle="tab">註冊</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                  <div class="tab-pane active" id="signin">
+
+                    <form class="form-signin" action="#">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Email" required autofocus />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" required />
+                    </div>
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me">Keep me signed in
+                    </label>
+                    <button class="btn btn-lg btn-block purple-bg" type="submit">Sign in</button>
+                    </form>
+                    <a class="forgotLnk" href="#">I can't access my account</a>
+                    <div class="or-box">
+                        <span class="or">OR</span>
+                        <div class="row">
+                            <div class="col-md-6 row-block">
+                                <a href="http://www.fb.com" class="btn btn-facebook btn-block">Facebook</a>
+                            </div>
+                            <div class="col-md-6 row-block">
+                                <a href="http://www.jquery2dotnet.com" class="btn btn-google btn-block">Google</a>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="signup">
+                        <div class="span3">
+                        <form>
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="UserName" required autofocus />
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Email" required/>
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control" placeholder="Password" required />
+                          </div>
+                          <div class="or-box">
+                            <span class="or">OR</span>
+                            <div class="row">
+                              <div class="col-md-6 row-block">
+                                  <div class="col-md-6 row-block">
+                                <a href="http://www.fb.com" class="btn btn-facebook btn-block">Facebook</a>
+                                </div>
+                                <div class="col-md-6 row-block">
+                                    <a href="http://www.jquery2dotnet.com" class="btn btn-google btn-block">Google</a>
+                                </div>
+                              </div>
+                            </div>
+                          </br>
+                          <input type="submit" value="Sign up" class="btn btn-success pull-right">
+                          <div class="clearfix"></div>
+                        </form>
+                    </div>
+                    </div>
+                  </div>               
+                </div>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+ <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/抹茶泡芙.jpg" alt="Generic placeholder image">
+          <h2>抹茶泡芙</h2>
+          <p>烤得金黃酥脆的外皮，裡面填著抹茶奶油內餡，一口咬下，唇齒間充斥著滿滿的抹茶香，濃郁卻不膩口</p>
+          <p><a class="btn btn-default" href="#" role="button">揪團 &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/眼影.jpg" alt="Generic placeholder image">
+          <h2>M.A.C極酷電力眼影*Fashion Circuit</h2>
+          <p>添加細微珠光，顏色非常飽和，適合任何膚色但化妝技巧熟稔的女生，初學者易塗抹過多，白天用時以指腹沾取，從上睫毛根部往眼褶處慢慢層疊；晚上則可從眼窩中央往眼頭與眼尾大片暈染。 </p>
+          <p><a class="btn btn-default" href="#" role="button">揪團 &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="img/動物甜甜圈.jpg" alt="Generic placeholder image">
+          <h2>動物造型甜甜圈</h2>
+          <p>日本超人氣甜甜圈專賣店 Floresta，推出極誘人可愛動物造型的甜甜圈，使用的材料幾乎都是有機與日本國產的，不使用其他添加物，全天然手工製作。店名floresta是葡萄牙語「森林」的意思，店主前田夫婦希望做出最自然, 安心, 健康的nature doughnuts。</p>
+          <p><a class="btn btn-default" href="#" role="button">揪團 &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+<!--       <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-5">                        
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+-->
+      <!-- /END THE FEATURETTES -->
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 fju-well, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/dropdown.js"></script>
+  </body>
+</html>

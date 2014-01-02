@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>新增團購商品</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="css/bootstrap(2).css" rel="stylesheet">
+    <link href="css/bootstrap.min(2).css" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <script language="JavaScript">
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+      
+    })
+    </script>
+
+    <!-- NAVBAR
+================================================== -->
+  
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">校園團購系統</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首頁</a></li>
+                  </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- display user info -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-align-justify"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                       <!-- dropdown menu links -->
+                      <li><a href="groupBuying.html"><i class="glyphicon glyphicon-star"></i>我的團購</a></li>
+                      <li><a href="memberInfo.html"><i class="glyphicon glyphicon-user"></i>會員資訊</a></li>
+                      <li><a href="invitingFriends.html"><i class="glyphicon glyphicon-envelope"></i>好友邀請</a></li>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><br><br><br><br><br>
+
+<!--表單開始
+=======================================================================-->
+<div class="container">
+        <div class="col-sm-8 contact-form">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRT4H8_O1u4npW6S99vdlIqOPQdPzSLH19HjcXuN28dSvMa493ycQ" class="img-rounded" hspace="240">
+        <span class="help-block" align="right">(只可上傳一張照片)</span>
+        <br><br>
+  <form id="contact" method="post" class="form" role="form">
+        <div class="row">
+        <div class="col-xs-6 col-md-6 form-group">
+           <input class="form-control" id="name" name="name" placeholder="團購名稱" type="text" required autofocus />
+        </div>
+        <div class="col-xs-6 col-md-6 form-group">
+        <input class="form-control" id="proNum" name="proNum" placeholder="商品名稱" type="text" required />
+           </div>
+        <div class="col-xs-6 col-md-6 form-group">
+        <input class="form-control" id="price" name="price" placeholder="價位" type="text" required />
+           </div>
+           <div class="col-xs-6 col-md-6 form-group">
+        <input class="form-control" id="time" name="time" placeholder="起訖時間" type="text" required />
+           </div>
+        </div>
+
+    <textarea class="form-control" id="message" name="message" placeholder="商品描述" rows="5"></textarea>
+       <br />
+
+     <div class="row">
+     <div class="col-xs-12 col-md-12 form-group">
+      <button type="button" class="btn btn-labeled btn-danger pull-right">
+         <span class="btn-label ">
+            <i class="glyphicon glyphicon-remove"></i>
+         </span>取消</button>
+     <button class="btn btn-primary pull-right" type="submit"><a href="invitingDone.html" target="_blank" style="text-decoration:none;color:white;">下一步</a></button>
+     
+  </form>
+</div><!--/表單結束-->
+</div>
+
+    
+
+      <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/dropdown.js"></script>
+
+  </body>
+</html>

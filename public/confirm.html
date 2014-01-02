@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>商品介紹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <script language="JavaScript">
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    </script>
+
+    <!-- NAVBAR
+================================================== -->
+  
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">校園團購系統</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="test.html">首頁</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- display new GroupBuy -->
+                <li class="active">
+                    <a href="addNewProduct.html"><i class="glyphicon glyphicon-plus"></i></a></li>
+                <!-- display user info -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-align-justify"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                       <!-- dropdown menu links -->
+                      <li><a href="groupBuying.html"><i class="glyphicon glyphicon-star"></i>我的團購</a></li>
+                      <li><a href="memberInfo.html"><i class="glyphicon glyphicon-user"></i>會員資訊</a></li>
+                  
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br><br><br><br>
+
+
+  <!--商品圖和介紹文
+  ==============================================-->
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-2 col-md-2">
+            <img src="img/熊熊和狗狗餅乾.jpg"
+            alt="" class="img-rounded img-responsive" />
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <blockquote>
+                <p>手工餅乾</p> <small><cite title="Source Title">甜點<i class="glyphicon glyphicon-cutlery"></i></cite></small>
+            </blockquote>
+               <p> <i class="glyphicon glyphicon-calendar"></i> 2013/12/3~2013/12/31<br/> 
+                   <i class="glyphicon glyphicon-usd"></i> 25元/個<br /> 
+                   <i class="glyphicon glyphicon-user"></i> 30人<br>
+                   <i class="glyphicon glyphicon-heart-empty">
+                    鬆軟帶有嚼勁的甜甜圈被香甜的白巧克力所包裹，<br>
+                    嚥下後喉舌留有淡淡的餘香，回味無窮。<br>
+                   可愛討喜的拉拉熊造型，讓人捨不得入口。<br>
+                   </i>
+                </p>
+        </div>
+       欲購買數量<select name="number" size="1">
+        <option value="1" selected>1
+        <option value="2">2
+        <option value="3">3
+        <option value="4">4
+        <option value="5">5
+        <option value="6">6
+        <option value="7">7
+        <option value="8">8
+        <option value="9">9
+        <option value="10">10
+     </select>
+    </div>
+    
+          <button type="button" class="btn btn-labeled btn-danger pull-right">
+         <span class="btn-label ">
+            <i class="glyphicon glyphicon-remove"></i>
+         </span>取消</button>
+     <button class="btn btn-primary pull-right" type="submit"><a href="product6.html" target="_blank" style="text-decoration:none;color:white;">確認訂購</a></button>
+    </div>
+
+
+
+</div>
+
+      </div>
+    </div>
+    
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/dropdown.js"></script>
+
+
+  </body>
+</html>

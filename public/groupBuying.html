@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>查看發起和加入的團購</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <script language="JavaScript">
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+
+    })
+    </script>
+
+
+
+    <!-- NAVBAR
+================================================== -->
+  
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">校園團購系統</a>
+            </div>
+            <div class="navbar-collapse collapse">
+             <ul class="nav navbar-nav">
+                <li class="active"><a href="#">首頁</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- display new GroupBuy -->
+                <li class="active">
+                    <a href="addNewProduct.html"><i class="glyphicon glyphicon-plus"></i></a></li>
+                <!-- display user info -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-align-justify"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                       <!-- dropdown menu links -->
+                      <li><a href="memberInfo.html"><i class="glyphicon glyphicon-user"></i>會員資訊</a></li>
+                      <li><a href="invitingFriends.html"><i class="glyphicon glyphicon-envelope"></i>好友邀請</a></li>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <br><br><br><br>
+
+    <!--頁籤
+    ===================================================-->
+   <div class="container">   
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Nav tabs category -->
+            <ul class="nav nav-tabs faq-cat-tabs">
+                <li class="active"><a href="#faq-cat-1" data-toggle="tab">我發起的團購</a></li>
+                <li><a href="#faq-cat-2" data-toggle="tab">我加入的團購</a></li>
+                <li><a href="#faq-cat-3" data-toggle="tab">被邀請的團購</a></li>
+            </ul>
+    
+            <!-- Tab panes -->
+            <div class="tab-content faq-cat-content">
+
+                <!--我發起的團購-->
+                <div class="tab-pane active in fade" id="faq-cat-1">  
+                   <table class="table table-list-search">
+
+                    <thead>
+                        <tr>
+                            <th>相片</th>
+                            <th>產品</th>
+                            <th></th>
+                            <th></th>
+                            <th>開始/結束</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/拉拉熊甜甜圈.jpg" height="50" width="48"></td>
+                            <td><a href="product.html">拉拉熊甜甜圈</a></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                              <button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/鮮奶蛋糕.jpg" height="50" width="48"></td>
+                            <td><a href="product2.html">鮮奶蛋糕</a></td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-danger">
+                                 <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/動物甜甜圈.jpg" height="50" width="48"></td>
+                            <td>動物甜甜圈</td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                              </button>
+                            </td>
+                        </tr>
+
+                      </tbody>
+                </table>
+                </div>
+               <!--我發起的團購(結束)-->
+
+
+               <!--我加入的團購-->
+                <div class="tab-pane fade" id="faq-cat-2"> 
+                 <table class="table table-list-search">
+                    <thead>
+                        <tr>
+                            <th>相片</th>
+                            <th>產品</th>
+                            <th></th>
+                            <th></th>
+                            <th>開始/結束</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/抹茶泡芙.jpg" height="50" width="48"></td>
+                            <td><a href="product4.html">抹茶泡芙</a></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                              <button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/抱枕.jpg" height="50" width="48"></td>
+                            <td><a href="product5.html">抱枕</a></td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/玫瑰紅酒.jpg" height="50" width="48"></td>
+                            <td>玫瑰紅酒</td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-danger">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
+                              </button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table><!--/表格--> 
+              </div>
+              <!--我加入的團購(結束)-->
+
+                   <!--被邀請的團購-->
+                    <div class="tab-pane fade" id="faq-cat-3">
+                         <table class="table table-list-search">
+
+                    <thead>
+                        <tr>
+                            <th>相片</th>
+                            <th>產品</th>
+                            <th></th>
+                            <th></th>
+                            <th>開始/結束</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/熊熊和狗狗餅乾.jpg" height="50" width="48"></td>
+                            <td><a href="product6.html">手工餅乾</a></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                              <button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/蔬菜餅乾.jpg" height="50" width="48"></td>
+                            <td>蔬菜餅乾</td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-danger">
+                                 <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/布蕾.jpg" height="50" width="48"></td>
+                            <td><a href="product8.html">布蕾</a></td>
+                            <td></td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                              </button>
+                            </td>
+                        </tr>
+
+                      </tbody>
+                </table>
+                    </div>
+                   
+                   <!--被邀請的團購(結束)-->
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </div><!--/頁籤-->
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/dropdown.js"></script>
+
+  </body>
+</html>

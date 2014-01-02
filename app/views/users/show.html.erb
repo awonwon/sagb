@@ -1,0 +1,99 @@
+  <br><br><br><br>
+
+  <!--表格
+================================================-->
+  <div class="container">   
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Nav tabs category -->
+            <ul class="nav nav-tabs faq-cat-tabs">
+                <li class="active"><a href="#faq-cat-1" data-toggle="tab">關於我</a></li>
+                <li><a href="#faq-cat-2" data-toggle="tab">我的好友</a></li>
+               
+            </ul>
+    
+            <!-- Tab panes -->
+            <div class="tab-content faq-cat-content">
+
+                <!--關於我-->
+                <div class="tab-pane active in fade" id="faq-cat-1">  
+                   <table class="table table-list-search">
+
+                    <thead>
+                          <tr>
+                            <th>相片</th>
+                            <th>姓名</th>
+                            <th></th>
+                            <th>信箱</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/小狗狗.jpg" height="50" width="48"></td>
+                            <td>我</td>
+                            <td></td>
+                            <td><%= @member.email%></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                       
+                    </tbody>
+                </table>   
+             </div><!--/表格--> 
+               <!--關於我(結束)-->
+
+
+               <!--我的好友-->
+                <div class="tab-pane fade" id="faq-cat-2"> 
+                 <table class="table table-list-search">
+                    <thead>
+                          <tr>
+                            <th>相片</th>
+                            <th>姓名</th>
+                            <th></th>
+                            <th>信箱</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/大彌.jpg" height="50" width="48"></td>
+                            <td>大彌</td>
+                            <td></td>
+                             <td>dami@yahoo.com.tw</td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/丁丁.jpg" height="50" width="48"></td>
+                            <td>丁丁</td>
+                            <td></td>
+                            <td>dingding@yahoo.com.tw</td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/亦謙.jpg" height="50" width="48"></td>
+                            <td>亦謙</td>
+                            <td></td>
+                            <td>littleblack@yahoo.com.tw</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+
+                       
+                    </tbody>
+                </table>   
+            </div><!--/我的好友(結束)--> 
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </div><!--/頁籤-->

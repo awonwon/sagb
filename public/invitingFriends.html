@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>邀請好友</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  </head>
+  <body>
+    <script language="JavaScript">
+    $('#myTab a').click(function (e) {
+      e.preventDefault()
+      $(this).tab('show')
+    })
+    </script>
+  <!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">校園團購系統</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+                <li class="active"><a href="products">首頁</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- display new GroupBuy -->
+                <li class="active">
+                    <a href="products/new"><i class="glyphicon glyphicon-plus"></i></a></li>
+                <!-- display user info -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" role="button" data-toggle="dropdown">
+                    <i class="glyphicon glyphicon-align-justify"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                       <!-- dropdown menu links -->
+                      <li><a href="products"><i class="glyphicon glyphicon-star"></i>我的團購</a></li>
+                      <li><a href="memberInfo.html"><i class="glyphicon glyphicon-user"></i>會員資訊</a></li>
+                      
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+<br><br><br><br>
+
+<!--搜尋好友
+=====================================================================-->
+    <div class="container">
+  <div class="row">
+        <div class="col-sm-8 col-md-4">
+            <form action="#" method="get">
+                <div class="input-group">
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                    <input class="form-control" id="system-search" name="q" placeholder="Search for" required>
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                </div>
+            </form>
+        </div>
+
+
+
+<br><br>    
+
+  <!--表格
+================================================-->
+  <div class="container">   
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Nav tabs category -->
+            <ul class="nav nav-tabs faq-cat-tabs">
+                <li class="active"><a href="#faq-cat-1" data-toggle="tab">邀請好友</a></li>
+                <li><a href="#faq-cat-2" data-toggle="tab">我被邀請</a></li>
+               
+            </ul>
+    
+            <!-- Tab panes -->
+            <div class="tab-content faq-cat-content">
+
+                <!--我的好友-->
+                <div class="tab-pane active in fade" id="faq-cat-1">  
+                   <table class="table table-list-search">
+
+                    <thead>
+                          <tr>
+                            <th>相片</th>
+                            <th>姓名</th>
+                            <th></th>
+                            <th>信箱</th>
+                            <th></th>
+                            <th>寄送邀請</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/亦謙.jpg" height="50" width="48"></td>
+                            <td>亦謙</td>
+                            <td></td>
+                            <td>littleblack@yahoo.com.tw</td>
+                            <td></td>
+                            <td>
+                              <button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>邀請
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/佳萱.jpg" height="50" width="48"></td>
+                            <td>佳萱</td>
+                            <td></td>
+                            <td>cuteGirl@gmai.com.tw</td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>邀請
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/小祐.jpg" height="50" width="48"></td>
+                            <td>小祐</td>
+                            <td></td>
+                            <td>YOOOOOOOOOOOO@yahoo.com.tw</td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>邀請
+                              </button>
+                            </td>
+                        </tr>
+
+                       
+                    </tbody>
+                </table>   
+             </div><!--/表格--> 
+               <!--我的好友(結束)-->
+
+
+               <!--我被邀請-->
+                <div class="tab-pane fade" id="faq-cat-2"> 
+                 <table class="table table-list-search">
+                    <thead>
+                          <tr>
+                            <th>相片</th>
+                            <th>姓名</th>
+                            <th></th>
+                            <th>信箱</th>
+                            <th></th>
+                            <th>接受/婉拒</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/書泰.jpg" height="50" width="48"></td>
+                            <td>書泰</td>
+                            <td></td>
+                            <td>ABei@yahoo.com.tw</td>
+                            <td></td>
+                            <td>
+                              <button type="button" class="btn btn-labeled btn-danger">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>婉拒
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/丁丁.jpg" height="50" width="48"></td>
+                            <td>丁丁</td>
+                            <td></td>
+                            <td>micyan@gmai.com.tw</td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>邀請
+                              </button>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td><img src="img/大彌.jpg" height="50" width="48"></td>
+                            <td>大彌</td>
+                            <td></td>
+                            <td>pokota@yahoo.com.tw</td>
+                            <td></td>
+                            <td><button type="button" class="btn btn-labeled btn-success">
+                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>邀請
+                              </button>
+                            </td>
+                        </tr>
+
+                       
+                    </tbody>
+                </table>   
+            </div><!--/我被邀請(結束)--> 
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </div><!--/頁籤-->
+
+
+
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/holder.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/dropdown.js"></script>
+
+  </body>
+</html>

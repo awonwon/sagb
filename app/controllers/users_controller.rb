@@ -13,6 +13,10 @@ class UsersController < ApplicationController
 		@member = Member.new
 	end
 
+	def show
+		@member = Member.find(params[:id])
+	end
+
 	private
 		def member_params
 			params.require(:member).permit(:name, :email, :password) #set which field can permit modify 

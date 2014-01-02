@@ -34,7 +34,7 @@
                             <td><img src="img/小狗狗.jpg" height="50" width="48"></td>
                             <td>我</td>
                             <td></td>
-                            <td><%= @member.email%></td>
+                            <td><%=link_to product.name, :controller => 'members', :action => 'show' ,:id => product%><%= @member.email%></td>
                             <td></td>
                             <td></td>
 

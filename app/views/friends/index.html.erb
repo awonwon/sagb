@@ -1,0 +1,41 @@
+<br><br><br><br><br><br>
+  <!--表格
+================================================-->
+  <div class="container">   
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+                 <table class="table table-list-search">
+                    <thead>
+                          <tr>
+                            <th>相片</th>
+                            <th>姓名</th>
+                            <th></th>
+                            <th>信箱</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if(@members) %>
+                            <% @members.each do |member| %>
+                            <tr>
+                                <td>
+                                    <img src="/img/user.png" height="50" width="48"></td>
+                                </td>
+                                <td><%=member.name%></td>
+                                <td></td>
+                                <td><%=member.email%></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <%end%>
+                        <%else%>
+                             <tr>
+                                <td>u haven't any frends now Q__Q</td>
+                            </tr>
+                        <%end%>
+                    </tbody>
+                </table>   
+         </div>
+      </div>
+    </div><!--/頁籤-->

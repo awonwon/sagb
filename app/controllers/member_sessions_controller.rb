@@ -4,6 +4,7 @@ class MemberSessionsController < ApplicationController
           session[:member_id] = @member.id
 			   redirect_to products_path
       else
+          flash[:errror_msg] = "fail"
           redirect_to root_path
 		end
 	end

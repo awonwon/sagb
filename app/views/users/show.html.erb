@@ -5,18 +5,7 @@
   <div class="container">   
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <!-- Nav tabs category -->
-            <ul class="nav nav-tabs faq-cat-tabs">
-                <li class="active"><a href="#faq-cat-1" data-toggle="tab">關於我</a></li>
-                <li><a href="#faq-cat-2" data-toggle="tab">我的好友</a></li>
-               
-            </ul>
-    
-            <!-- Tab panes -->
-            <div class="tab-content faq-cat-content">
-
                 <!--關於我-->
-                <div class="tab-pane active in fade" id="faq-cat-1">  
                    <table class="table table-list-search">
 
                     <thead>
@@ -31,23 +20,30 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><img src="img/小狗狗.jpg" height="50" width="48"></td>
-                            <td>我</td>
+                            <td>
+                                <%if(!@member)%> <!-- pic column!! -->
+                                    <img src="<%=@member.pic%>" height="50" width="48"></td>
+                                <%else%>
+                                    <img src="/img/user.png" height="50" width="48"></td>
+                                <%end%>
+                            <td><%= @member.name%></td>
                             <td></td>
-                            <td><%=link_to product.name, :controller => 'members', :action => 'show' ,:id => product%><%= @member.email%></td>
-                            <td></td>
+                            <td><%= @member.email%></td>
+                            <td>
+                                <%=link_to 'friends', :controller => 'friends', :action => 'index' ,:id => @member.email%>
+                                <%=link_to 'new friends', '/friends/search'%>
+                            </td>
                             <td></td>
 
                         </tr>
                        
                     </tbody>
                 </table>   
-             </div><!--/表格--> 
                <!--關於我(結束)-->
 
 
                <!--我的好友-->
-                <div class="tab-pane fade" id="faq-cat-2"> 
+ <!--                <div class="tab-pane fade" id="faq-cat-2"> 
                  <table class="table table-list-search">
                     <thead>
                           <tr>
@@ -90,7 +86,7 @@
                        
                     </tbody>
                 </table>   
-            </div><!--/我的好友(結束)--> 
+            </div><!--/我的好友(結束)-->  -->
 
                 </div>
             </div>

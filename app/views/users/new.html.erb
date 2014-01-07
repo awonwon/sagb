@@ -71,7 +71,7 @@
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div class="tab-pane active" id="signin">
+                  <div class="tab-pane active" id="signin"> <!-- sign in -->
 
                     <%= form_tag(member_sessions_path) do%>
                     <div class="form-group">
@@ -82,18 +82,7 @@
                     </div>
                       <%= submit_tag 'SignIn' ,:class=>"btn btn-lg btn-block purple-bg"%>
                     <%end%>
-                    <!-- <form class="form-signin" action="#">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email" required autofocus />
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="Password" required />
-                    </div>
-                    <label class="checkbox">
-                        <input type="checkbox" value="remember-me">Keep me signed in
-                    </label>
-                    <button class="btn btn-lg btn-block purple-bg" type="submit">Sign in</button>
-                    </form> -->
+
                     <a class="forgotLnk" href="#">I can't access my account</a>
                     <div class="or-box">
                         <span class="or">OR</span>
@@ -102,30 +91,25 @@
                                 <a href="http://www.fb.com" class="btn btn-facebook btn-block">Facebook</a>
                             </div>
                             <div class="col-md-6 row-block">
-                                <a href="http://www.jquery2dotnet.com" class="btn btn-google btn-block">Google</a>
+                                <a href="https://plus.google.com/?hl=zh-TW" class="btn btn-google btn-block">Google</a>
                             </div>
                         </div>
                       </div>
                     </div>
 
-                    <div class="tab-pane" id="signup">
+                    <div class="tab-pane" id="signup"> <!-- sing up -->
                         <div class="span3">
                           <%=form_for @member, :url =>users_path do |f|%>
-                          name: <%=f.text_field :name ,:class=> "form-control"%>
-                          email: <%=f.text_field :email,:class=> "form-control"%>
-                          password: <%=f.password_field :password,:class=> "form-control"%>
-                          <%=f.submit 'Sign Up', :class=>"btn btn-success pull-right"%>
-                        <%end%>
-                        <!-- <form>
                           <div class="form-group">
-                            <input type="text" class="form-control" placeholder="UserName" required autofocus />
+                            name: <%=f.text_field :name ,:class=> "form-control"%>
                           </div>
                           <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Email" required/>
+                            email: <%=f.text_field :email,:class=> "form-control"%>
                           </div>
                           <div class="form-group">
-                              <input type="password" class="form-control" placeholder="Password" required />
+                            password: <%=f.password_field :password,:class=> "form-control"%>
                           </div>
+
                           <div class="or-box">
                             <span class="or">OR</span>
                             <div class="row">
@@ -134,15 +118,15 @@
                                 <a href="http://www.fb.com" class="btn btn-facebook btn-block">Facebook</a>
                                 </div>
                                 <div class="col-md-6 row-block">
-                                    <a href="http://www.jquery2dotnet.com" class="btn btn-google btn-block">Google</a>
+                                    <a href="https://plus.google.com/?hl=zh-TW" class="btn btn-google btn-block">Google</a>
                                 </div>
                               </div>
                             </div>
                           </br>
-                          <input type="submit" value="Sign up" class="btn btn-success pull-right">
+                           <%=f.submit 'Sign Up', :class=>"btn btn-success pull-right"%>
                           <div class="clearfix"></div>
-                        </form> -->
-                    </div>
+                        <%end%>
+                      </div>
                     </div>
                   </div>               
                 </div>

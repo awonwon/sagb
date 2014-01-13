@@ -7,6 +7,7 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :price
       t.string :description
       t.integer :status
+      t.integer :lowbondPeople
       t.timestamp :start_at
       t.timestamp :end_at
       t.timestamps

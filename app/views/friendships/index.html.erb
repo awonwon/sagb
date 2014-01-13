@@ -1,12 +1,11 @@
-<br><br><br><br>
-<br><br>
+  <br><br><br><br>
 
   <!--表格
 ================================================-->
   <div class="container">   
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-                <!--關於我-->
+                <!--friends-->
                    <table class="table table-list-search">
 
                     <thead>
@@ -20,24 +19,18 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <% @friends.each do |f|%>
                         <tr>
                             <td>
-                                <%if(!@member)%> <!-- pic column!! -->
-                                    <img src="<%=@member.pic%>" height="50" width="48"></td>
-                                <%else%>
-                                    <img src="/img/user.png" height="50" width="48"></td>
-                                <%end%>
-                            <td><%= @member.name%></td>
+                                <img src="/img/user.png" height="50" width="48"></td>
+                            <td><%= f.name%></td>
                             <td></td>
-                            <td><%= @member.email%></td>
+                            <td><%= f.email%></td>
                             <td>
-                                <%=link_to 'friends', user_friends_path(@member)%>
-                                <%=link_to 'new friends', controller: 'users', action: 'index' %>
                             </td>
                             <td></td>
-
                         </tr>
-                       
+                        <%end%>
                     </tbody>
                 </table>   
 

@@ -22,59 +22,94 @@
             </p>
     </div>  
 </div>
+<br><br>
 
-<table class="table table-list-search">
+<% 
+    if(@product.member.id==@current_member.id)
+        @admin=true
+    else
+        @admin=false
+    end
+    
+    @my_buyer=@current_member.buyers.find_by_product_id(@product.id)
+
+        if(@my_buyer!=nil && @my_buyer.status!=1 && !@admin)
+%>
+            <%=form_tag buyer_path(@my_buyer), method: "put" do%>
+            qty<%=text_field_tag :qty%><br>
+            <%=hidden_field_tag :status, 1%><br>
+            <%=submit_tag 'submit', :class=>"btn btn-primary pull-left"%>
+            <%end%>
+<%
+       else
+            @buyers = @product.buyers
+%>
+            <table class="table table-list-search">
                 <thead>
                     <tr>
                         <th>跟團者清單</th>
                         <th>稱呼</th>
                         <th>信箱</th>
-                        <th>已確認/待確認</th>
-                        <th></th>
-                        <th>已付款</th>
+                        <% if(@admin) %>
+                            <th>已確認/待確認</th>
+                            <th></th>
+                            <th>付款</th>
+                        <%end%>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><img src="/img/蛇足.jpg" height="50" width="48"></td>
-                        <td>蛇足</td>
-                        <td>dasoku@yahoo.com.tw</td>
-                        <td><button type="button" class="btn btn-success btn-md btn3d"><span class="glyphicon glyphicon-ok"></span> 已確認</button></td>
-                        <td></td>
-                        <td><button type="button" class="btn btn-default btn-md btn3d">已付款</button></td>
 
+                <%@buyers.each do |b| %>
+                <%@member=Member.find(b)%>
+                    <tr>
+                        <td><img src="/img/user.png" height="50" width="48"></td>
+                        <td><%=@member.name%></td>
+                        <td><%=@member.email%></td>
+                        <td>
+                            <%if(@admin)%>
+                                <%if(b.status==1)%>
+                                    <button type="button" class="btn btn-success btn-md btn3d">
+                                    <span class="glyphicon glyphicon-ok"></span>已確認</button>
+                                <%else%>
+                                     <button type="button" class="btn btn-warning btn-md btn3d">
+                                     <span class="glyphicon glyphicon-warning-sign"></span> 待確認</button>
+                                <%end%>
+                        </td>
+                        <td></td>
+                        <td>
+                                <%if(b.remittance!=nil)%>
+                                    <%b.remittance%>
+                                <%else%>
+                                    <button type="button" class="btn btn-default btn-md btn3d">No付款</button>
+                                <%end%>
+                            <%end%>
+                        </td>
                     </tr>
+               <%end%>
+
                     <tr>
                         <td><img src="/img/咪醬.jpg" height="50" width="48"></td>
                         <td>みーちゃん</td>
                         <td>micyan@gmai.com.tw</td>
-                        <td><button type="button" class="btn btn-warning btn-md btn3d"><span class="glyphicon glyphicon-warning-sign"></span> 待確認</button></td>
+                        <td>
+                           
+                        </td>
                         <td></td>
                         <td></td>
 
                     </tr>
-                    <tr>
-                        <td><img src="/img/PKT.jpg" height="50" width="48"></td>
-                        <td>ぽこた</td>
-                        <td>pokota@yahoo.com.tw</td>
-                        <td><button type="button" class="btn btn-success btn-md btn3d"><span class="glyphicon glyphicon-ok"></span> 已確認</button></td>
-                        <td></td>
-                        <td><button type="button" class="btn btn-default btn-md btn3d">已付款</button></td>
-                    </tr>
-
-                    <!--邀請按鈕
-                    ===========================================-->
-                    <tr>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td></td>
-                      <td><button class="btn btn btn-success" type="submit"><a href="invitingFriends.html" target="_blank" style="text-decoration:none;color:white;">邀請好友</a></button></td>
-                    </tr>
-                    <!--/邀請按鈕-->
                 </tbody>
-            </table>   
+            </table>
+    <%end%>
+
+
         <!--/表格--> 
+        <%if(@admin)%>
+            <%=link_to '邀請好友', new_product_buyer_path(@product)%>
+            <button class="btn btn btn-success" type="submit">
+
+                <!-- <a href="invitingFriends.html" target="_blank" style="text-decoration:none;color:white;">邀請好友</a> -->
+            </button>
+        <%end%>
 
 </div>

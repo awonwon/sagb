@@ -25,6 +25,7 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <% @products = @current_member.products%>
                         <% @products.each do |product| %>
                         <tr>
                             <td><img src="<%=product.pic%>" height="50" width="48"></td>
@@ -32,37 +33,18 @@
                             <td></td>
                             <td></td>
                             <td>
-                              <button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
-                              </button>
+                              <%if(product.status==1)%>
+                                <button type="button" class="btn btn-labeled btn-success">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                                </button>
+                              <%else%>
+                                <button type="button" class="btn btn-labeled btn-danger">
+                                 <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
+                               </button>
+                              <%end%>
                             </td>
                           </tr>
-                          <%end%>
-
-                        <tr>
-                            <td><img src="img/動物甜甜圈.jpg" height="50" width="48"></td>
-                            <td>動物甜甜圈</td>
-                            <td></td>
-                            <td></td>
-                            <td><button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
-                              </button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td><img src="img/鮮奶蛋糕.jpg" height="50" width="48"></td>
-                            <td><a href="product2.html">鮮奶蛋糕</a></td>
-                            <td></td>
-                            <td></td>
-                            <td><button type="button" class="btn btn-labeled btn-danger">
-                                 <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
-                              </button>
-                            </td>
-
-                        </tr>
-
-
+                        <%end%>
                       </tbody>
                 </table>
                 </div>
@@ -82,40 +64,25 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <% @current_member.bought_products.each do |product| %>
                         <tr>
-                            <td><img src="img/抹茶泡芙.jpg" height="50" width="48"></td>
-                            <td><a href="product4.html">抹茶泡芙</a></td>
+                            <td><img src="<%=product.pic%>" height="50" width="48"></td>
+                            <td><%=link_to product.name, :controller => 'products', :action => 'show' ,:id => product%></td>
                             <td></td>
                             <td></td>
                             <td>
-                              <button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
-                              </button>
+                              <%if(product.status==1)%>
+                                <button type="button" class="btn btn-labeled btn-success">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                                </button>
+                              <%else%>
+                                <button type="button" class="btn btn-labeled btn-danger">
+                                 <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
+                               </button>
+                              <%end%>
                             </td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="img/抱枕.jpg" height="50" width="48"></td>
-                            <td><a href="product5.html">抱枕</a></td>
-                            <td></td>
-                            <td></td>
-                            <td><button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
-                              </button>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="img/玫瑰紅酒.jpg" height="50" width="48"></td>
-                            <td>玫瑰紅酒</td>
-                            <td></td>
-                            <td></td>
-                            <td><button type="button" class="btn btn-labeled btn-danger">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
-                              </button>
-                            </td>
-                        </tr>
-
+                          </tr>
+                        <%end%>
                     </tbody>
                 </table><!--/表格--> 
               </div>
@@ -135,40 +102,25 @@
                         </tr>
                     </thead>
                     <tbody>
+                      <% @current_member.invited_products.each do |product| %>
                         <tr>
-                            <td><img src="img/熊熊和狗狗餅乾.jpg" height="50" width="48"></td>
-                            <td><a href="product6.html">手工餅乾</a></td>
+                            <td><img src="<%=product.pic%>" height="50" width="48"></td>
+                            <td><%=link_to product.name, :controller => 'products', :action => 'show' ,:id => product%></td>
                             <td></td>
                             <td></td>
                             <td>
-                              <button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
-                              </button>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="img/蔬菜餅乾.jpg" height="50" width="48"></td>
-                            <td>蔬菜餅乾</td>
-                            <td></td>
-                            <td></td>
-                            <td><button type="button" class="btn btn-labeled btn-danger">
+                              <%if(product.status==1)%>
+                                <button type="button" class="btn btn-labeled btn-success">
+                                    <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
+                                </button>
+                              <%else%>
+                                <button type="button" class="btn btn-labeled btn-danger">
                                  <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>已結束
-                              </button>
+                               </button>
+                              <%end%>
                             </td>
-
-                        </tr>
-                        <tr>
-                            <td><img src="img/布蕾.jpg" height="50" width="48"></td>
-                            <td><a href="product8.html">布蕾</a></td>
-                            <td></td>
-                            <td></td>
-                            <td><button type="button" class="btn btn-labeled btn-success">
-                                  <span class="btn-label"><i class="glyphicon glyphicon-ok"></i></span>進行中
-                              </button>
-                            </td>
-                        </tr>
-
+                          </tr>
+                        <%end%>
                       </tbody>
                 </table>
                     </div>

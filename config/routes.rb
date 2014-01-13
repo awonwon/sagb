@@ -1,12 +1,15 @@
 Groupbuy::Application.routes.draw do
-  resources :users
-  resources :member_sessions
-  resources :products
-  resources :friends do
-    collection do
-      get :search, :as=>:search_friends
-    end
+  resources :users do
+    resources :friends, controller: "friendships"
   end
+
+  resources :products do
+    resources :buyers, controller: "buyers"
+  end
+
+  resources :member_sessions
+  resources :friendships
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

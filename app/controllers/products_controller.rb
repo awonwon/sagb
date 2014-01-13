@@ -6,8 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    @product = Product.new(product_params)
-    if(@product.save)
+    if(@product = @current_member.product.create(product_params))
       redirect_to :action => :index
     else
       redirect_to root_path
@@ -15,7 +14,7 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    
   end
 
   def show
@@ -24,6 +23,6 @@ class ProductsController < ApplicationController
 
   private
   def product_params
-    params.require(:product).permit(:name, :price, :description, :status, :start_at, :end_at, :pic) #set which field can permit modify 
+    params.require(:product).permit(:name, :price, :description, :status, :start_at, :end_at, :pic, :status) #set which field can permit modify 
   end
 end

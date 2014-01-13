@@ -11,11 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104104524) do
+ActiveRecord::Schema.define(version: 20140112073306) do
 
-  create_table "friends", force: true do |t|
-    t.string   "email"
-    t.string   "femail"
+  create_table "buyers", force: true do |t|
+    t.string   "member_id"
+    t.string   "product_id"
+    t.integer  "qty"
+    t.string   "remittance"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "status"
+  end
+
+  create_table "friendships", force: true do |t|
+    t.integer  "member_id"
+    t.integer  "friend_id"
     t.integer  "status"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -43,7 +53,6 @@ ActiveRecord::Schema.define(version: 20140104104524) do
   create_table "products", force: true do |t|
     t.string   "name"
     t.string   "pic"
-    t.string   "email"
     t.integer  "price"
     t.string   "description"
     t.integer  "status"
@@ -51,6 +60,7 @@ ActiveRecord::Schema.define(version: 20140104104524) do
     t.datetime "end_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "member_id"
   end
 
 end

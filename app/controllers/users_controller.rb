@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+before_action :check_session , only: [:index, :show]
 
 	def create
 		@member = Member.new(member_params)
@@ -16,8 +17,15 @@ class UsersController < ApplicationController
 	end
 
 	def show
-		if(check_session)
-			@member = Member.find(params[:id])
+		@member = Member.find(params[:id])
+	end
+
+	def index
+		if(params[:keyword])
+			@s = "%" + params[:keyword] + "%"
+			@members = Member.where("name Like ? OR email Like ?", @s, @s)
+		else
+			@members = Member.all
 		end
 	end
 

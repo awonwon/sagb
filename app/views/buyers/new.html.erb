@@ -1,0 +1,61 @@
+  <br><br><br><br>
+
+  <div class="container">
+  <div class="row">
+        <div class="col-sm-8 col-md-4">
+            <form action="#" method="get">
+                <div class="input-group">
+                    <!-- USE TWITTER TYPEAHEAD JSON WITH API TO SEARCH -->
+                    <%=form_tag users_path, method: "get" do%>
+                    <%=text_field_tag :keyword, "", class:"form-control"%>
+                    <%=submit_tag 'search', :class=>"btn btn-default"%>
+                    <%end%>
+                </div>
+            </form>
+        </div>
+
+  <!--表格
+================================================-->
+  <div class="container">   
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+                <!--friends-->
+                   <table class="table table-list-search">
+
+                    <thead>
+                          <tr>
+                            <th>相片</th>
+                            <th>姓名</th>
+                            <th></th>
+                            <th>信箱</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @current_member.friends.each do |m|%>
+                        <tr>
+                            <td>
+                                <img src="/img/user.png" height="50" width="48"></td>
+                            <td><%= m.name%></td>
+                            <td></td>
+                            <td><%= m.email%></td>
+                            <td>
+                                  <%=form_tag product_buyers_path(@product), method:"post" do%>
+                                  <%=hidden_field_tag :product_id, @product.id%>
+                                  <%=hidden_field_tag :member_id, m.id%>
+                                  <%=hidden_field_tag :status, 0%>
+                                  <%=submit_tag 'invite', :class=>"btn btn-primary pull-right"%>
+                                  <%end%>
+                            </td>
+                            <td></td>
+                        </tr>
+                        <%end%>
+                    </tbody>
+                </table>   
+
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>

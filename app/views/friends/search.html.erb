@@ -36,16 +36,26 @@
                     </thead>
                     <tbody>
                         <% if(@members) %>
-                            <% @members.each do |member| %>
+                            <% @members.each do |fmember| %>
                             <tr>
                                 <td>
                                     <img src="/img/user.png" height="50" width="48"></td>
                                 </td>
-                                <td><%=member.name%></td>
+                                <td><%=fmember.name%></td>
                                 <td></td>
-                                <td><%=member.email%></td>
+                                <td><%=fmember.email%></td>
                                 <td>
-                                    <%=link_to 'add', :controller => 'friends', :action => 'create' ,:id => member.email%>
+                                    <%if(fmember.email != @current_member.email)%>
+                                        <%@friend = Friend.new%>
+                                        <%=form_for @friend do |f|%>
+                                            <%=f.hidden_field :email, :value=> @current_member.email%>
+                                            <%=f.hidden_field :femail, :value=> fmember.email%>
+                                            <%=f.hidden_field :status, :value=> "1"%>
+                                            <%=f.submit 'add', :class=>"btn btn-primary pull-right"%>
+                                        <%end%>
+                                    <%else%>
+
+                                    <%end%>
                                 </td>
                                 <td></td>
                             </tr>
